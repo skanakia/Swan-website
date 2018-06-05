@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Swan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./bower_components/slideout.js/index.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+
+</head>
+
+<body>
+    <nav class="navbar ">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://bulma.io">
+                <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            </a>
+        </div>
+    </nav>
+    <div class="columns is-fullheight">
+        <div class="column is-2 is-sidebar-menu" id="menu">
+            <aside class="menu">
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a>Dashboard</a>
+                    </li>
+                    <li>
+                        <a>Customers</a>
+                    </li>
+                </ul>
+                <p class="menu-label">
+                    Administration
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a>Team Settings</a>
+                    </li>
+                    <li>
+                        <a class="is-active">Manage Your Team</a>
+                        <ul>
+                            <li>
+                                <a>Members</a>
+                            </li>
+                            <li>
+                                <a>Plugins</a>
+                            </li>
+                            <li>
+                                <a>Add a member</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Invitations</a>
+                    </li>
+                    <li>
+                        <a>Cloud Storage Environment Settings</a>
+                    </li>
+                    <li>
+                        <a>Authentication</a>
+                    </li>
+                </ul>
+                <p class="menu-label">
+                    Transactions
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a>Payments</a>
+                    </li>
+                    <li>
+                        <a>Transfers</a>
+                    </li>
+                    <li>
+                        <a>Balance</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div id="panel" class="column is-main-content">
+            <button class="toggle-button">☰</button>
+            Main content
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.11/slideout.min.js"></script>
+    <script>
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+        });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function () {
+            slideout.toggle();
+        });
+    </script>
+
+    <script src="./assets/javascript/main.js"></script>
+</body>
+
+</html>
