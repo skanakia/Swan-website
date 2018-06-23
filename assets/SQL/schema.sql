@@ -1,0 +1,39 @@
+CREATE DATABASE Swan_DB;
+
+USE Swan_DB;
+
+CREATE TABLE students (
+  id INTEGER(14) NOT NULL AUTO_INCREMENT,
+  email VARCHAR(45) NOT NULL,
+  username VARCHAR(45) NOT NULL,
+  password VARCHAR(45)  NOT NULL,
+  school VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE professors (
+  id INTEGER(14) NOT NULL AUTO_INCREMENT,
+  email VARCHAR(45) NOT NULL,
+  username VARCHAR(45) NOT NULL,
+  password VARCHAR(45)  NOT NULL,
+  school VARCHAR(45), NOT NULL,
+  rec_for VARCHAR(45) NULL,
+  rec_for_email VARCHAR(45) NULL,
+  rec_letter VARBINARY(MAX) FILESTREAM NULL,
+  rec_school VARCHAR(45) NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE recipient (
+  id INTEGER(14) NOT NULL AUTO_INCREMENT,
+  email VARCHAR(45) NOT NULL,
+  username VARCHAR(45) NOT NULL,
+  password VARCHAR(45)  NOT NULL,
+  affiliation VARCHAR(45), NOT NULL,
+  rec_student VARCHAR(45) NULL,
+  rec_professor VARCHAR(45) NULL,
+  rec_prof_email VARCHAR(45) NULL,
+  rec_letter VARBINARY(MAX) FILESTREAM NULL,
+  PRIMARY KEY (id)
+);
+
